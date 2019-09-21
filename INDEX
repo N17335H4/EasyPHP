@@ -13,3 +13,4 @@ L1
 3.	Frameworks: Vanilla PHP, or PHP without any other tools, can be used on its own to create web application back-ends. These frameworks provide scaffolding and solutions to common problems in back-end web development. Ex: Laravel, cakephp, symphony.
 How is PHP used in HTML?
 PHP is often used to build dynamic web pages. A dynamic web page is one where each visitor to the website gets a customized page that van look different than how the site looks to another visitor. This is in contrast to static web pages which provide the same content to each visitor.
+When the website is delivered from the back-end to the front-end, the PHP content is executed and added to the HTML document. 
