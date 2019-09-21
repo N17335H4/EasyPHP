@@ -14,3 +14,39 @@ L1
 How is PHP used in HTML?
 PHP is often used to build dynamic web pages. A dynamic web page is one where each visitor to the website gets a customized page that van look different than how the site looks to another visitor. This is in contrast to static web pages which provide the same content to each visitor.
 When the website is delivered from the back-end to the front-end, the PHP content is executed and added to the HTML document. 
+PHP can also be executed from the terminal. We can use PHP as a general purpose programming language to write programs that give simple instructions to the computer without involving HTML or the web. When this is done, the output of the program is logged to the terminal. This is useful when testing functionality or for writing simple local programs. But while writing only the starting notation is required, leaving the end.
+PHP is not always case sensitive (echo or Echo is used) and whitespace is generally ignored.
+PHP comments: Sometimes, we want to include text in our files that we don’t want the computer to execute or display to the end user. We can do this with comments. Comments can be used to annotate our code to make it clearer to ourselves or others. They are also useful to prevent lines of code from being executed without deleting them. 
+1.	# or // for single line comments.
+2.	/*    */ for multi-line comments.
+Example : 
+When the visitor to the website, in this case you, modifies the task list, a request is made for a new web page, the PHP code runs again in the back-end and delivers a new version of the site with updated HTML. 
+Todo list added... (complete or remove)
+
+L2
+The dollar sign is known as sigil; it’s a character that allows the computer to see quickly that something is a variable. 
+While naming PHP variables with using an underscore between words on variable names with more than one word in their name. This is known as snake case:
+8.9 + 1.1 will return 10, an integer, and not 10.0
+** is the exponent operator (not * *)
+Modulo operator: 7.9 % 3.8 will perform the same calculation as 7 % 3—both operations will return 1. 
+Order of precedence: PEMDAS
+Magic trick: 
+$my_num = 5;
+$answer = $my_num;
+$answer+=2;
+$answer*=2;
+$answer-=2;
+$answer/=2;
+$answer-= $my_num;
+echo $answer //prints one for any num
+
+L3
+Camel case – start with lowercase and capitalize the first letter of every new word. 
+Function blablabla()
+Invoking the function – blablabla();
+-	We can define functions with parameters which are variables we can refer to throughout our function’s body.
+-	When invoking functions, the values that we give them are called arguments.
+-	Variables within functions have local scope and cannot be accessed from outside the function.
+-	Use the global keyword to use variables from the global scope within a function.
+
+L4
