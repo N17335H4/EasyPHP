@@ -1,0 +1,80 @@
+//The start and end notations are <?php and ?>
+<?php 
+//The echo keyword is used for output
+
+echo " \\ for a back slash called as an escape sequence used for quotes and many other non-alphanumeric marks and \n for next line";
+echo “<p> this is the paragraph</p>”;
+
+echo "hello" . " world"; //string concatenation: combines two strings
+
+//declaring a variable and printing
+$var = "string";
+echo &var; //prints string
+
+//PHP strings allow us to place variables directly into double quoted strings. These variables will be parsed which means the computer will read the variables as the value they hold rather than see them as just a sequence of characters. PHP allows us to specifically indicate the variable name by wrapping it in curly braces to avoid any confusion. Ex: echo "I have always been obsessed with ${noun}s. I'm ${adjective}ish. I'm always ${verb}ing."; 
+
+//concatenating assignment operator is .=
+$full_name = "Aisle"; 
+$full_name .= " Nevertell"; 
+echo $full_name; // Prints: Aisle Nevertell
+
+//Assign by reference:
+$first_player_rank = "Beginner"; 
+$second_player_rank = $first_player_rank; 
+echo $second_player_rank; // Prints: Beginner 
+$first_player_rank = "Intermediate"; // Reassign the value of $first_player_rank 
+echo $second_player_rank; // Still Prints: Beginner
+
+//Reference assignment operator is =& .
+$first_player_rank = "Beginner"; 
+$second_player_rank =& $first_player_rank; 
+echo $second_player_rank; // Prints: Beginner 
+$first_player_rank = "Intermediate"; // Reassign the value of $first_player_rank 
+echo $second_player_rank; // Prints: Intermediate
+
+$very_bad_unclear_name = "15 chicken wings";
+$order =& $very_bad_unclear_name;
+$order .= "better"; 
+ echo "\nYour order is: $very_bad_unclear_name."; //prints Your order is: 15 chicken wingsbetter.
+
+//Return statements:
+function countdown() { 
+echo "4, 3, 2, 1, "; 
+return "blastoff!"; 
+}
+$return_value = countdown(); // Prints: 4, 3, 2, 1, 
+echo $return_value; // Prints: blastoff!
+//Return NULL: nothing is printed or 0
+//Valid: echo fn(fn1(“”)); (parametric functions)
+
+//Default parameter: 
+function greetFriend($name = "old chum") { 
+echo "Hello, $name!"; 
+}; 
+greetFriend("Marvin"); // Prints: Hello, Marvin! 
+greetFriend(); // Prints: Hello, old chum!
+//If not allotted, it results an error.
+
+//Pass by reference: 
+function addX ($param) { 
+$param = $param . "X"; 
+echo $param; 
+}; 
+$word = "Hello"; 
+addX($word); // Prints: HelloX 
+echo $word; // Prints: Hello
+
+function addXPermanently (&$param) { 
+$param = $param . "X"; 
+echo $param; 
+}; 
+$word = "Hello"; 
+addXPermanently($word); // Prints: HelloX 
+echo $word; // Prints: HelloX
+
+echo("This works!\n"); 
+echo "This also works!\n"; 
+//echo("This would NOT work", "\n"); 
+echo "Buuuut!", " ", "This", " ", "does!", "\n";
+
+?>
