@@ -50,3 +50,7 @@ Invoking the function – blablabla();
 -	Use the global keyword to use variables from the global scope within a function.
 
 L4
+The abs() function returns the absolute value of its number argument.
+The round() function which returns the nearest integer to its number argument.
+abs ( mixed $number ) : number
+Here we see the function name followed by parentheses. The parentheses contain information about the function’s parameter(s)—first the parameter’s type followed by its name. A function that prints something but doesn’t return a value will have :void instead of a return type. Similarly, a function that doesn’t accept parameters will have void within its parentheses. 
