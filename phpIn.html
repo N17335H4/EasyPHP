@@ -1,0 +1,19 @@
+//PHP in HTML
+<html>
+ <head>
+  <title>My First PHP Site</title>
+ </head>
+ <body>
+ <?php 
+    echo "<h1>Oh hi!</h1>"; //tags are inside the quotes of echo
+    
+    //we can incorporate all php language features
+  function makeHeaderGreeting ($name){
+  return "<h1>Hello, ${name}!</h1>";
+}
+echo makeHeaderGreeting("World"); //this code is translated into HTML with a header that reads Hello, World!
+// *** echo "<p>My favorite color is {$data['color']}.</p>"; //it is to print the value of the color key of the $data array
+// You can concatenate the result of a function within an echo statement: echo "My calculation says that " . calculation($input) . " is the answer.";
+  ?> 
+ </body>
+</html>
