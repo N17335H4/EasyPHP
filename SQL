@@ -24,3 +24,33 @@ BETWEEN: for numbers - [ ], for alaphabets - [ )
 ORDER BY: //after where if present// desc or asc (by default).
 //In the result, you have to scroll right because the column name is very long. To shorten it, we can rename the column to ‘Review’ using AS:
 don't forfet comma after select argumets while using case
+AGGREGATE FUNCTIONS
+count(), sum(), min(), max(), avg(), round(col, no. of decimal places req) (can use constraints before arguments too)
+**GROUP BY //you can GROUP BY a column that was not included in the SELECT statement also.
+/*SELECT ROUND(imdb_rating),
+   COUNT(name)
+FROM movies
+GROUP BY ROUND(imdb_rating)
+ORDER BY ROUND(imdb_rating);
+=
+SELECT ROUND(imdb_rating),
+   COUNT(name)
+FROM movies
+GROUP BY 1
+ORDER BY 1; //where 1 is col1 of select */ //no order followed while referring columns with no.s.
+HAVING: imagine that we want to see how many movies of different genres were produced each year, but we only care about years and genres with at least 10 movies. 
+We can’t use WHERE here because we don’t want to filter the rows; we want to filter groups.
+SELECT year,
+   genre,
+   COUNT(name)
+FROM movies
+GROUP BY 1, 2
+HAVING COUNT(name) > 10;
+MULTIPLE TABLES
+Combining tables by JOIN. if needed WHERE, then it comes after ON. //NULL values do not match while joining. //maintain order of tables for order of columns in result
+LEFT JOIN: prints the remained ones of table1 with null in other columns.
+primary keys: can't be null, each value must be unique and a table can't have more than one primary key column.
+foreign key: primary key of other table
+CROSS JOIN: n1 * n2 rows //no ON and it can performed over multiple tables * * * ...
+UNION: iff same columns in same order in both // duplicates are excluded
+WITH: //can be used with more than one loop // *do not include ; inside parenthesis
