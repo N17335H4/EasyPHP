@@ -1,0 +1,27 @@
+//Superglobals are automatic global variables which are available in all scopes throughout a script. list of $ : GLOBALS, _SERVER, _GET, _POST, _FILES, _COOKIE, _SESSION, _REQUEST, _ENV
+/*$_GET - this contains an associative array of variables passed to the current script using query parameters in the URL
+$_POST - this contains an associative array of variables passed to the current script using a form submitted using the “POST” method
+$_REQUEST - this contains the contents of $_GET, $_POST, and $_COOKIE */
+<html>
+<body>
+$_REQUEST:
+<?php print_r($_REQUEST);?>
+<br>
+$_GET:
+<?php print_r($_GET);?>
+<br>
+$_POST:
+<?php print_r($_POST);?>
+<form method="get">
+GET Form: <input type="text" name="get_name">
+<input type="submit" value="Submit GET">
+</form>
+<form method="post">
+POST Form: <input type="text" name="post_name">
+<input type="submit" value="Submit POST">
+</form>
+<a href="index.php">Reset</a>
+</body>
+</html>
+//above code adds text submitted at get box into request and get arrays; at post box into request and post arrays
+//<?= $_GET['language'];? - is the php shorthand syntax which prints the value of language key on the global array get.
