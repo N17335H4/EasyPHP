@@ -25,3 +25,5 @@ POST Form: <input type="text" name="post_name">
 </html>
 //above code adds text submitted at get box into request and get arrays; at post box into request and post arrays
 //<?= $_GET['language'];? - is the php shorthand syntax which prints the value of language key on the global array get.
+//ACTION: If you would like to have the user navigate to a new URL and handle the form input there, you can specify the URL in the form’s action attribute. Since the action attribute specifies a relative URL, you can also enter the name of a PHP file in the same directory as the current one.
+<?=$_GET['first']." ".$_GET['last']?> //concatenation inside shorthand syntax
