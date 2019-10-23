@@ -69,4 +69,23 @@ A data base: important information like usernames and passwords has to be stored
 PHP can be used in many capacities in the back-end. However, in this lesson, we’ll get started small by focussing on one small role the PHP application server can play in generating HTML which the web server will send to a client. 
 
 L7
+if, relational operators, identical or not, else if, switch (with fall thorugh - without breaks), ternary operator, readline() (scanner),
 If the link has been clicked, then the web browser renders it in purple, rather than blue. The programming concept that makes this possible is called conditionals. 
+identical operator is === (not ==).and not identical is !==
+using date():
+function checkRenewalMonth($renewal_month){
+  $current_month = date("F");
+  if ($renewal_month !== $current_month) {
+    return "Welcome!";
+  } else {
+    return "Time to renew";
+  }
+}
+
+/* We get the current month with a function, so that it's always accurate. You can invoke your function with the current month as a string. */ 
+$current_month = date("F");
+echo checkRenewalMonth($current_month);
+
+echo "\n\n";
+echo checkRenewalMonth("July");
+-False statements: Empty strings, null, an undefined or undeclared variable, an empty array, number 0, string "0"
